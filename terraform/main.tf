@@ -43,7 +43,7 @@ resource "proxmox_vm_qemu" "ubuntuvm-1" {
     ]
   }
 
-  ipconfig0 = "ip=192.168.1.20${count.index + 1}/24,gw=192.168.1.1"
+  ipconfig0 = "ip=192.168.1.2${count.index + 1}/24,gw=192.168.1.1"
   nameserver = "192.168.1.1"
   
   sshkeys = <<EOF
